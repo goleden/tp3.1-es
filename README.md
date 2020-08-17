@@ -1,21 +1,26 @@
 # tp3.1-es
 
+
+## 代码目录，
+
+\Es    curd类库及demo
+
+\vendor    类库
+
+\Lib\Action\IndexAction.class.php    控制器测试
+
+\index.php    入口修改
+
+
 ## 步骤
-
-拷贝目录下代码到系统，
-
-\Es curd类库及demo
-
-\vendor 类库
-
-index.php 入口修改
-
 
 - 安装es
 
+- 复制vendor到根目录
+
 - 在index.php中引入autoload.php。require './vendor/autoload.php';
 
-- 运行DemoAction.class
+- 控制器测试 IndexAction.class.php
 
 
 
