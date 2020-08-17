@@ -73,15 +73,23 @@ class Curd
             }
             $body['query']['bool']['minimum_should_match'] = 1;
         }
+        $page = $page > 1 ? $page : 1;
         $params = [
             'index' => $this->index,
             'type' => $this->type,
-            'from' => ($page - 1) * $limit,
+            'from' => ($page > 1 ? ($page - 1) : 0) * $limit,
             'size' => $limit,
             'body' => $body
         ];
 
+        print_r($params);
+
         $results = $this->client->search($params);
+
+        print_r($results);
+        exit;
+
+
 
         $result = [];
         if ($results['hits']['hits']) {
