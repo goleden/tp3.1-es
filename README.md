@@ -1,7 +1,7 @@
 # tp3.1-es
 
 
-## 代码目录，
+## 代码目录
 
 \Es    curd类库及demo
 
@@ -18,7 +18,16 @@
 
 - 复制vendor到根目录
 
-- 在index.php中引入autoload.php。require './vendor/autoload.php';
+- 在index.php中引入autoload.php
+
+```
+<?php
+// ...
+
+    require './vendor/autoload.php';
+
+//...
+```
 
 - 控制器测试 IndexAction.class.php
 
