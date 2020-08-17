@@ -2,10 +2,14 @@
 
 ## 步骤
 
-拷贝目录下所有代码到系统
-\Es
-\vendor
-index.php
+拷贝目录下代码到系统，
+
+\Es curd类库及demo
+
+\vendor 类库
+
+index.php 入口修改
+
 
 - 安装es
 
