@@ -12,8 +12,8 @@ class DemoAction extends Action
         echo '<pre>';
         // 新增、修改
         $client = new Curd([
-            'elasticsearch:9200'
-        ]);
+            'localhost:9200' // es地址
+        ], 'firstIndex');
         $response = $client->save('id' . rand(1, 10), [
             'id' => rand(1, 10),
             'title' => 'xxx',
