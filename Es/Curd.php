@@ -7,9 +7,13 @@ class Curd
 {
     /**
      * @var Client
-     * @author guoruidian
      */
     protected $client;
+    
+    /**
+     * 索引名称
+     * @var string
+     */
     protected $index;
     protected $type;
 
@@ -50,12 +54,21 @@ class Curd
     /**
      * 搜索
      *
-     * @param string $search
-     * @param array $fields ['fiels' => 'title', '']
-     * @param integer $page
-     * @param integer $limit
-     * @return void
-     * @author guoruidian
+     * @param string $search，搜索词
+     * @param array $fields，查询字段，如：
+     [
+         [
+             'fiels' => 'title', // 字段名称
+             'boost' => 10 // 权重
+         ],
+         [
+             'fiels' => 'title2', // 字段名称2
+             'boost' => 5 // 权重2
+         ]
+     ]
+     * @param integer $page 页码，从第一页开始
+     * @param integer $limit 每页行数
+     * @return array
      */
     public function search($keyword, $fields, $page = 1, $limit = 10)
     {
@@ -81,18 +94,10 @@ class Curd
             'size' => $limit,
             'body' => $body
         ];
-
-        print_r($params);
-
         $results = $this->client->search($params);
 
-        print_r($results);
-        exit;
-
-
-
         $result = [];
-        if ($results['hits']['hits']) {
+        if (!empty($results['hits']['hits'])) {
             foreach ($results['hits']['hits'] as $hits) {
                 $source = $hits['_source'];
                 $source['_id'] = $hits['_id'];
