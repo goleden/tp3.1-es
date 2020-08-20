@@ -24,6 +24,8 @@ https://baijiahao.baidu.com/s?id=1665558949449584473&wfr=spider&for=pc
 
 > 注意，需要先新增数据（建立索引），再查询。
 
+#### 初始化
+
 ```
 <?php
 
