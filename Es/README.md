@@ -82,5 +82,8 @@ https://baijiahao.baidu.com/s?id=1665558949449584473&wfr=spider&for=pc
 ```
 
 
+#### 更多
+
+https://github.com/goleden/tp3.1-es/blob/master/Es/Curd.php
 
 
