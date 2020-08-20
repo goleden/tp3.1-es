@@ -4,11 +4,14 @@
 
 ### 安装java
 
+> 非必须，经查看并测试，新版本已内置java环境
+
 #### 参考
 
 https://baijiahao.baidu.com/s?id=1665558949449584473&wfr=spider&for=pc
 
 命令行输入java -version，能成功即可
+
 
 
 ### 安装es
