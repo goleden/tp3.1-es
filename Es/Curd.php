@@ -17,6 +17,15 @@ class Curd
     protected $index;
     protected $type;
 
+    /**
+     * 初始化
+     *
+     *     $client = new Curd(['127.0.0.1:9200'], 'index_name');
+     *
+     * @param array $hosts es地址
+     * @param string $index 索引名称
+     * @param string $type 类型
+     */
     public function __construct($hosts, $index = 'default', $type = 'default')
     {
         if (empty($hosts)) {
@@ -32,8 +41,8 @@ class Curd
     /**
      * 新增/修改，保存
      *
-     * @param string $id
-     * @param array $body
+     * @param string $id 文档id
+     * @param array $body 文档内容
      * @return void
      * @author guoruidian
      */
@@ -53,17 +62,19 @@ class Curd
      * 搜索
      *
      * @param string $search，搜索词
-     * @param array $fields，查询字段，如：
-     [
-         [
-             'fiels' => 'title', // 字段名称
-             'boost' => 10 // 权重
-         ],
-         [
-             'fiels' => 'title2', // 字段名称2
-             'boost' => 5 // 权重2
-         ]
-     ]
+     *
+     * [
+     *      [
+     *          'fiels' => 'title', // 字段名称
+     *          'boost' => 10 // 权重
+     *      ],
+     *      [
+     *          'fiels' => 'title2', // 字段名称2
+     *          'boost' => 5 // 权重2
+     *      ]
+     *  ]
+     *
+     * @param array $fields，查询字段
      * @param integer $page 页码，从第一页开始
      * @param integer $limit 每页行数
      * @return array
