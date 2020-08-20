@@ -22,6 +22,13 @@ https://baijiahao.baidu.com/s?id=1665558949449584473&wfr=spider&for=pc
 
 访问localhost:9200，能成功即可
 
+#### 设置
+
+配置文件：/config/elasticsearch.yml
+
+```
+path.data: /usr/xc/elasticsearch-data
+```
 
 ### 运行代码
 
