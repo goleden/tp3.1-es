@@ -17,12 +17,10 @@ class Curd
     {
         if (empty($hosts)) {
             $hosts = [
-                'localhost:9200'
+                '127.0.0.1:9200'
             ];
         }
-        $this->client = ClientBuilder::create()->setHosts([
-            'elasticsearch:9200'
-        ])->build();
+        $this->client = ClientBuilder::create()->setHosts($hosts)->build();
         $this->index = $index;
         $this->type = $type;
     }
